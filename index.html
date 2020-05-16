@@ -47,7 +47,7 @@
   -webkit-transform: rotate(-45deg);
 }
 
-#services{
+#skills, #internship{
   box-shadow: 0 0 10px rgba(0,0,0,0.8); 
 }
 
@@ -108,7 +108,75 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transform: rotate(120deg);
 }
+.myShadow {
+  -webkit-filter: drop-shadow( 3px 3px 10px rgba(0, 0, 0, .7));
+  filter: drop-shadow( 3px 3px 10px rgba(0, 0, 0, .7));
+  /* Similar syntax to box-shadow */
+}
+#about{
+    height: 800px!important;
+  }
+  @media only screen and (max-width: 1200px) {  
+  #skills{
+    height:800px!important;
+  }
+  #internship{
+    height: 1000px!important;
+  }
+  .headerPic{
+    min-width: 200px;
+  }
+}
+  @media only screen and (max-width: 1141px) {  
+  .downloadButton{
+    padding: 15px!important;
 
+  }
+  .skillsButton{
+    padding: 15px!important;
+  }
+}
+@media only screen and (max-width: 1041px) {  
+  .description{
+    font-size: 17px;
+  }
+  .downloadButton{
+    padding: 15px!important;
+
+  }
+  .skillsButton{
+    padding: 15px!important;
+  }
+}
+@media only screen and (max-width: 992px) {
+    #about{
+      height:1100px!important;
+    }
+
+    #skills{
+      height: 1150px!important;
+    }
+    #internship{
+      height: 1450px!important;
+    }
+    .ecareLogo{
+      margin-top: 15px;
+    }
+
+    
+    .downloadButton{
+      margin-top: 48px 16px 0px 0px!important;
+      padding: 20px!important;
+    }
+    
+    .skillsButton{
+      padding: 20px!important;
+    }
+
+    .skillTable{
+      width: 50%!important;
+    }
+  }
 
 </style>
 
@@ -119,11 +187,15 @@
         <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">PORTFOLIO</a>
-                </li>
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">ABOUT</a>
                 </li>
-                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">CONTACT</a>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#skills">SKILLS</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">PORTFOLIO</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#internship">INTERNSHIP</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#footer">CONTACT</a>
                 </li>
             </ul>
         </div>
@@ -138,15 +210,23 @@
           <div class="col-7 pr-5">
             <h1 class="mb-1 text-white">Luyten Dries</h1>
             <h3 class="mb-5 text-white">
-              <em>I'm a <span style="color: #385A64;">full-stack developper (Trainee)</span></em>
+              <em>I'm a <span style="color: #385A64;">full-stack developper (Scholar)</span></em>
             </h3>
           </div>
           <div class="col-4">
-              <div class="hexagon">
+              <!-- <div class="hexagon">
                 <div class="hex-wrapper">
                   <div class="hex-border bg-image"></div>
                 </div>
-            </div>
+              </div> -->
+              <svg class="myShadow headerPic" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 90%; min-width:400px;">
+                <defs>
+                  <pattern id="img" patternUnits="userSpaceOnUse" width="100" height="100">
+                    <image xlink:href="img\2968383.jpg" x="-25" width="150" height="100" />
+                  </pattern>
+                </defs>
+                <polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#img)"/>
+              </svg>
           </div>
         </div>
       </div>
@@ -154,22 +234,27 @@
     </header>
   </section>
   
+  <!-- About custom style -->
+  <style>
+
+  </style>
 
   <!-- About -->
-  <section class="content-section bg-light" id="about" style="transform: skewY(3deg); height: 800px!important; background-color: #fff!important;">
+  <section class="content-section bg-light" id="about" style="transform: skewY(3deg);  background-color: #fff!important;">
     <div class="text-center" style="transform: skewY(-3deg);">
       <div class="row">
-        <div class="col-12 mx-auto">
+        <div class="col-11 mx-auto">
           <h1 class="text-dark">About</h1>
           <div style="height: 6px; border-radius: 30px; width: 200px;" class="bg-dark mx-auto mb-5"></div>
           <div class="row">
-            <div class="col p-0">
-              <img src="img/AboutMe.jpg" alt=""  height="500" width="700">
+            <div class="col-lg-6 p-0 col-md-11">
+              <img src="img/AboutMe.jpg" alt="" style="width: 100%; max-width: 700px; height: auto;">
             </div>
-            <div class="col pl-0">
-              <p class="lead mb-5">This theme features a flexible, UX friendly sidebar menu and stock photos from our friends at
-                <a href="https://unsplash.com/">Unsplash</a>!</p>
-              <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">What We Offer</a>
+            <div class="col-lg-4 pl-0 ml-5 mr-5 col-md-11 description" >
+              <p class="lead" style="font-size: 20px;">My name is Dries Luyten, I am a motivated Application Development student at Thomas More Geel.</p>
+              <p class="lead" style="font-size: 20px;">This year (June 2020) I will finish my studies and I am excited to finally practice my interests in the business world. Besides IT I have a passion for dogs, sports, music and videogames.</p>
+              <p class="lead" style="font-size: 20px;">You can download my CV or read more about my skills and projects below. </p>
+              <a class="btn btn-dark btn-xl js-scroll-trigger mt-5 mr-3 skillsButton" href="#skills">Skills</a><a class="btn btn-xl js-scroll-trigger mt-5 mt-md-5 mt-sm-5 downloadButton" style="background-color: #4DA6FF;" href="#services">Download my CV</a>
             </div>
           </div>
          
@@ -178,51 +263,92 @@
     </div>
   </section>
 
-  <!-- Services -->
-  <section class="content-section bg-primary text-white text-center" id="services" style="transform: skewY(-3deg); background-color: #FF4F5A!important; height:700px">
+  <!-- skills -->
+  <section class="content-section bg-primary text-white text-center" id="skills" style="transform: skewY(-3deg); background-color: #FF4F5A!important; height:720px">
     <div class="container" style="transform: skewY(3deg);">
       <div class="content-section-heading" >
-        <h3 class="text-secondary mb-0">Services</h3>
-        <h2 class="mb-5">What We Offer</h2>
+        <h1>SKILLS</h1>
+        <div style="height: 6px; border-radius: 30px; width: 200px; background-color: #4DA6FF; color: #4DA6FF;" class=" mx-auto mb-5"></div>
       </div>
       <div class="row">
-        <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-          <span class="service-icon rounded-circle mx-auto mb-3">
-            <i class="icon-screen-smartphone"></i>
-          </span>
+        
+        <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+          <svg class="myShadow mb-3" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 200px;">
+            <defs>
+              <pattern id="imgResponsive" patternUnits="userSpaceOnUse" width="100" height="100">
+                <image xlink:href="img\monitor.png" x="-25" width="150" height="100" />
+              </pattern>
+            </defs>
+            <polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#imgResponsive)"/>
+          </svg>
           <h4>
-            <strong>Responsive</strong>
+            <strong>Responsive Webdesign</strong>
           </h4>
-          <p class="text-faded mb-0">Looks great on any screen size!</p>
+          <p class="text-faded mb-0">HTML5 & CSS3</p>
+          <p class="text-faded mb-0">TS, JS, JQuery, PHP</p>
+          <p class="text-faded mb-0">Angular, React</p>
+          <p class="text-faded mb-0">Bootstrap, Angular Material</p>
         </div>
-        <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-          <span class="service-icon rounded-circle mx-auto mb-3">
-            <i class="icon-pencil"></i>
-          </span>
-          <h4>
-            <strong>Redesigned</strong>
-          </h4>
-          <p class="text-faded mb-0">Freshly redesigned for Bootstrap 4.</p>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
-          <span class="service-icon rounded-circle mx-auto mb-3">
-            <i class="icon-like"></i>
-          </span>
+
+
+        <div class="col-lg-4 col-md-6 mb-5 mb-md-0">
+          <svg class="myShadow mb-3" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 200px;">
+            <defs>
+              <pattern id="imgFavorite" patternUnits="userSpaceOnUse" width="100" height="100">
+                <image xlink:href="img\like.png" x="-25" width="150" height="100" />
+              </pattern>
+            </defs>
+            <polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#imgFavorite)"/>
+          </svg>
           <h4>
             <strong>Favorited</strong>
           </h4>
-          <p class="text-faded mb-0">Millions of users
-            <i class="fas fa-heart"></i>
-            Start Bootstrap!</p>
+          <p class="text-faded mb-0">Currently really enjoying full-stack development with Angular as the front-end framework styled by Bootstrap and a .NET Core Web API.</p>
         </div>
-        <div class="col-lg-3 col-md-6">
-          <span class="service-icon rounded-circle mx-auto mb-3">
-            <i class="icon-mustache"></i>
-          </span>
+
+        <div class="col-lg-4 col-md-12">
+         <svg class="myShadow mb-3" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 200px;">
+            <defs>
+              <pattern id="imgSkills" patternUnits="userSpaceOnUse" width="100" height="100">
+                <image xlink:href="img\education.png" x="-25" width="150" height="100" />
+              </pattern>
+            </defs>
+            <polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#imgSkills)"/>
+          </svg>
           <h4>
-            <strong>Question</strong>
+            <strong>Experience</strong>
           </h4>
-          <p class="text-faded mb-0">I mustache you a question...</p>
+          <div style="width: 80%;" class="mx-auto skillTable">
+            <table class="table table-sm table-borderless text-white text-center" >
+              <tbody>
+                <tr class="p-0">      
+                  <td class="pb-0 mb-0">HTML&CSS</td>         
+                  <td class="pb-0 mb-0">Used in various projects</td>             
+                </tr>
+                <tr class="p-0">      
+                  <td class="pb-0 mb-0">Angular</td>         
+                  <td class="pb-0 mb-0">Used in various projects</td>             
+                </tr>
+                <tr class="p-0">      
+                  <td class="pb-0 mb-0">C#</td>         
+                  <td class="pb-0 mb-0">Used in various projects</td>             
+                </tr>
+                <tr class="p-0">    
+                  <td class="pb-0 mb-0">Java</td>           
+                  <td class="pb-0 mb-0">Used in a project</td>
+                </tr>
+                <tr class="p-0 m-0">    
+                  <td class="pb-0 mb-0">PHP</td>           
+                  <td class="pb-0 mb-0">Used in a project</td>
+                </tr>
+                <tr class="p-0 m-0">
+                  <td  class="pb-0 mb-0">React</td>
+                  <td  class="pb-0 mb-0">Fundamentals</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
         </div>
       </div>
     </div>
@@ -233,16 +359,17 @@
   <section class="content-section" id="portfolio">
     <div class="container">
       <div class="content-section-heading text-center">
-        <h3 class="text-secondary mb-0">Portfolio</h3>
-        <h2 class="mb-5">Recent Projects</h2>
+        <h3 class="mb-0" style="color: #FFCC66;">Portfolio</h3>
+        <h1 class=" text-dark">Recent Projects</h1>
+        <div style="height: 6px; border-radius: 30px; width: 200px;" class="bg-dark mx-auto mb-5"></div>
       </div>
       <div class="row no-gutters">
         <div class="col-lg-6">
           <a class="portfolio-item" href="#">
             <span class="caption">
               <span class="caption-content">
-                <h2>Stationary</h2>
-                <p class="mb-0">A yellow pencil with envelopes on a clean, blue backdrop!</p>
+                <h2>Psychonaut</h2>
+                <p class="mb-0">Psychonaut is a small project I created when I was following a Unity3D game development course.</p>
               </span>
             </span>
             <img class="img-fluid" src="img/portfolio-1.jpg" alt="">
@@ -252,8 +379,8 @@
           <a class="portfolio-item" href="#">
             <span class="caption">
               <span class="caption-content">
-                <h2>Ice Cream</h2>
-                <p class="mb-0">A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>
+                <h2>Project 4.0</h2>
+                <p class="mb-0">Project 4.0 is a schoolproject which I worked on with a team. Our client was PCFruit, a research center that researches fruits.</p>
               </span>
             </span>
             <img class="img-fluid" src="img/portfolio-2.jpg" alt="">
@@ -263,8 +390,8 @@
           <a class="portfolio-item" href="#">
             <span class="caption">
               <span class="caption-content">
-                <h2>Strawberries</h2>
-                <p class="mb-0">Strawberries are such a tasty snack, especially with a little sugar on top!</p>
+                <h2>Application Challenge</h2>
+                <p class="mb-0">The application challenge was a challenge organised by Grasshoppers Academy where my team and I had a week to develop a webapplication with Angular and .NET Core.</p>
               </span>
             </span>
             <img class="img-fluid" src="img/portfolio-3.jpg" alt="">
@@ -274,8 +401,8 @@
           <a class="portfolio-item" href="#">
             <span class="caption">
               <span class="caption-content">
-                <h2>Workspace</h2>
-                <p class="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>
+                <h2>Project APP-BIT</h2>
+                <p class="mb-0">Project APP-BIT was a project I realised in a team the second year of my studies. It was made in PHP with the CodeIgniter framework.</p>
               </span>
             </span>
             <img class="img-fluid" src="img/portfolio-4.jpg" alt="">
@@ -285,29 +412,86 @@
     </div>
   </section>
 
+  <style>
+.downloadLink {
+  line-height: initial;  /* added */
+}
+.downloadLink:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 0px;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+.downloadLink:hover:after {
+  width: 100%;
+  background: #4DA6FF;
+  cursor: pointer;
+}
+  </style>
+
   <!--internship-->
-  <section class="content-section bg-primary text-white text-center" id="services" style="transform: skewY(3deg); background-color: #FF4F5A!important; height:700px">
+  <section class="content-section bg-primary text-white text-center" id="internship" style="transform: skewY(3deg); background-color: #FF4F5A!important; height:900px">
     
     <div class="container" style="transform: skewY(-3deg);">
       <div class="content-section-heading" >
         <h2 class="mb-1">Internship</h2>
-        <div style="height: 6px; border-radius: 30px; width: 220px;" class="bg-dark mx-auto mb-5"></div>
+        <div style="height: 6px; border-radius: 30px; width: 220px; background-color: #4DA6FF;" class="mx-auto mb-5" ></div>
       </div>
       <div class="row">
-        <div class="col">
-          <p>
-            blablabla verander rode bol in bg-dark
+        <div class="col-lg-6 col-md-12">
+          <p class="lead">
+            During the last year of my studies at Thomas More I worked as an intern at E.Care for a per a period of 3 months (March - May 2020). 
+            When I was looking for businesses to do my internship I stumbled upon E.Care, a Software Development business that creates, sells and implements software that supports the medical care process in hospitals.
+            E.Care has a great working software with many satisfied customers, but the UI and UX of the application is getting a bit outdated, it's currently completely made in Windows Forms and it is not mobile friendly.
+            To change that, they wanted to make a switch to a mobile friendly web-based variant of the software made with the Angular framework. 
+            That's where I come in, my job was to analyse various modules of the existing software, prototype and finally develop them in an Agile way.
+            Once a module or a component of a module was done we packaged them into an Angular library so it could be installed and used in various projects. 
+            Since E.care has many modules we weren't able to rework them all, but we did finish as much as we could do in 3 months. These modules and components are now ready to be looked at by someone who will style the new software in a unique way.
           </p>
         </div>
-        <div class="col">
-          <img src="img/logo-white-red.png" height="100px" width="300px" alt="">
-          <div class="row">
-            <div class="col">PVA</div>
-            <div class="col">Realisatie</div>
+        <div class="col-lg-6 col-md-12">
+          <img src="img/logo-white-red.png" class="ecareLogo" height="100px" width="300px" alt="">
+          <div class="row mt-5 mr-5 ml-5">
+            <div class="col">
+              
+                <svg class="myShadow mb-3" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 70%;">
+                  <defs>
+                    <pattern id="imgDownload" patternUnits="userSpaceOnUse" width="100" height="100">
+                      <image xlink:href="img\interface.png" x="-25" width="150" height="100" />
+                    </pattern>
+                  </defs>
+                  <polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#imgDownload)"/>
+                </svg>
+                <h3><span class="downloadLink">PVA</span></h3> 
           </div>
-          <div class="row">
-            <div class="col">Realisatie</div>
-            <div class="col">Reflectie</div>
+            <div class="col">
+              <svg class="myShadow mb-3" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 70%;">
+                <defs>
+                  <pattern id="imgDownload" patternUnits="userSpaceOnUse" width="100" height="100">
+                    <image xlink:href="img\interface.png" x="-25" width="150" height="100" />
+                  </pattern>
+                </defs>
+                <polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#imgDownload)"/>
+              </svg>
+              <h3><span class="downloadLink">Realisatie</span></h3> 
+            </div>
+          </div>
+          <div class="row mr-5 ml-5">
+            <div class="col mt-2">
+              <svg class="myShadow mb-3" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 35%;">
+                <defs>
+                  <pattern id="imgDownload" patternUnits="userSpaceOnUse" width="100" height="100">
+                    <image xlink:href="img\interface.png" x="-25" width="150" height="100" />
+                  </pattern>
+                </defs>
+                <polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#imgDownload)"/>
+              </svg>
+              <h3><span class="downloadLink">Reflectie</span></h3> 
+            </div>
+            
           </div>
         </div>
       </div>
@@ -315,21 +499,21 @@
   </section>
 
   <!-- Footer -->
-  <footer class="footer text-center pb-3">
+  <footer class="footer text-center pb-3" id="footer">
     <div class="container">
       <ul class="list-inline mb-5 ">
         <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white mr-3" style="background-color: #FF4F5A!important;" href="#">
+          <a class="social-link rounded-circle text-white mr-3" style="background-color: #4DA6FF!important;" href="#">
             <i class="icon-social-facebook"></i>
           </a>
         </li>
         <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white mr-3" href="#" style="background-color: #FF4F5A!important;">
+          <a class="social-link rounded-circle text-white mr-3" href="#" style="background-color: #4DA6FF!important;">
             <i class="icon-social-twitter"></i>
           </a>
         </li>
         <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white" href="#" style="background-color: #FF4F5A!important;">
+          <a class="social-link rounded-circle text-white" href="#" style="background-color: #4DA6FF!important;">
             <i class="icon-social-github"></i>
           </a>
         </li>
