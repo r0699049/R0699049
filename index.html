@@ -41,7 +41,7 @@
   cursor: pointer;
 }
 
-#skills, #internship{
+#skills, #internship, #myHeader{
   box-shadow: 0 0 10px rgba(0,0,0,0.8); 
 }
 
@@ -61,6 +61,23 @@
 #about{
     height: 800px!important;
   }
+
+#headerImage {
+  background: white;
+  border-radius: 20px;
+  font-size: 100px;
+  text-align: center;
+  margin-right: 10px;
+  border-radius:50%;
+  display:inline-block;
+  padding:65px;
+  box-shadow: 0.2em 0.2em 0 0 rgba(15, 28, 63, 0.125);
+}
+
+.myImg {
+  display:block;
+}
+
   @media only screen and (max-width: 1200px) {  
   #skills{
     height:800px!important;
@@ -80,6 +97,15 @@
   .skillsButton{
     padding: 15px!important;
   }
+  .myImg{
+    width: 250px;
+  }
+
+    #headerImage {
+      padding:55px;
+
+    }
+
 }
 @media only screen and (min-width: 1041px) {  
   .headerPic{
@@ -151,7 +177,52 @@
       height: 1500px!important;
     }
   }
+@media only screen and (max-width: 500px) {
 
+    .myImg{
+        width: 150px;
+    }
+
+    #headerImage {
+        padding:45px;
+
+    }
+}
+@media only screen and (max-width: 400px) {
+
+    .downloadButton{
+        margin-top: 48px 16px 0px 0px!important;
+        padding: 10px!important;
+    }
+
+    .skillsButton{
+        padding: 10px!important;
+    }
+}
+@media only screen and (max-width: 330px) {
+
+    #about{
+        height: 1200px!important;
+    }
+}
+@media only screen and (max-width: 324px) {
+    .downloadButton{
+        margin-top: 20px !important;
+        padding: 10px!important;
+    }
+    #about{
+        height: 1250px!important;
+    }
+}
+@media only screen and (max-width: 284px) {
+
+    #about{
+        height: 1350px!important;
+    }
+}
+  section{
+    width: 100vw!important;
+  }
 </style>
 
 <body id="page-top" style="background-color: #ffff!important;">
@@ -176,31 +247,45 @@
     </div>
 </nav>
 
+  <style>
+    @media only screen and (max-width: 1041px) {
+
+      .myName, .myHeaderText{
+        margin:auto!important;
+      }
+    }
+
+  </style>
   <!-- Header -->
-  <section>
-    <header class="masthead d-flex mt-0" id="myHeader" style="height: 91vh!important; background-color: #FF4F5A!important; background: none; transform: skewY(3deg); margin-top: 20px!important; ">
-      <div class="container text-center my-auto" style="transform: skewY(-3deg);">
+  <section >
+    <header class="masthead d-flex mt-0" id="myHeader" style="height: 100vh!important; background-color: #FF4F5A!important; background: none; margin-top: 20px!important; ">
+      <div class="container text-center my-auto" >
         <div class="row">
-          <div class="col-lg-7 pr-5 col-md-7 col-sm-12">
-            <h1 class="mb-1 text-white">Luyten Dries</h1>
-            <h3 class="mb-5 text-white">
-              <em style="position: fixed; left: 8%;" class="ml-0 pl-0 headerText">I'm a <span style="color: #385A64;" id="headerText">student App Dev @ Thomas More</span></em>
-            </h3>
+          <div class="col-lg-7 pr-5 col-md-12 col-sm-12" >
+            <div class="row">
+              <h1 class="mb-1 text-white myName">Luyten Dries</h1>
+            </div>
+            <div class="row">
+              <h3 class="mb-5 text-white myHeaderText">
+                <em class="ml-0 pl-0 ">I'm a <span style="color: #385A64;" id="headerText">student App Dev @ Thomas More</span></em>
+              </h3>
+            </div>
           </div>
-          <div class="col-lg-4 col-md-4 col-sm-12 headerPicCol">
+          <div class="col-lg-4 col-md-12 col-sm-12 headerPicCol">
               <!-- <div class="hexagon">
                 <div class="hex-wrapper">
                   <div class="hex-border bg-image"></div>
                 </div>
               </div> -->
-              <svg class="myShadow headerPic" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 90%;">
-                <defs>
-                  <pattern id="img" patternUnits="userSpaceOnUse" width="100" height="100">
-                    <image xlink:href="img\2968383.jpg" x="-25" width="150" height="100" />
-                  </pattern>
-                </defs>
-                <polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#img)"/>
-              </svg>
+            <i id="headerImage"><img class="myImg" src="img/developer.jpg" width="300" /></i>
+              <!--<svg class="myShadow headerPic" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 90%;">-->
+                <!--<defs>-->
+                  <!--<pattern id="img" patternUnits="userSpaceOnUse" width="100" height="100">-->
+                    <!--<image xlink:href="img\2968383.jpg" x="-25" width="150" height="100" />-->
+                  <!--</pattern>-->
+                <!--</defs>-->
+                <!--<polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#img)"/>-->
+              <!--</svg>-->
           </div>
         </div>
       </div>
@@ -210,12 +295,17 @@
   
   <!-- About custom style -->
   <style>
+    @media only screen and (max-width: 410px) {
 
+     #skills{
+        height:1600px!important;
+      }
+    }
   </style>
 
   <!-- About -->
-  <section class="content-section bg-light" id="about" style="transform: skewY(3deg);  background-color: #fff!important;">
-    <div class="text-center" style="transform: skewY(-3deg);">
+  <section class="content-section bg-light" id="about" style=" background-color: #fff!important;">
+    <div class="text-center" >
       <div class="row">
         <div class="col-11 mx-auto">
           <h1 class="text-dark">About</h1>
@@ -237,9 +327,13 @@
     </div>
   </section>
 
+  <style>
+
+  </style>
+
   <!-- skills -->
-  <section class="content-section bg-primary text-white text-center" id="skills" style="transform: skewY(-3deg); background-color: #FF4F5A!important; height:720px">
-    <div class="container" style="transform: skewY(3deg);">
+  <section class="content-section bg-primary text-white text-center" id="skills" style=" background-color: #FF4F5A!important; height:720px">
+    <div class="container" >
       <div class="content-section-heading" >
         <h1>SKILLS</h1>
         <div style="height: 6px; border-radius: 30px; width: 200px;" class=" mx-auto mb-5 bg-dark"></div>
@@ -247,14 +341,15 @@
       <div class="row">
         
         <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
-          <svg class="myShadow mb-3" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 200px;">
-            <defs>
-              <pattern id="imgResponsive" patternUnits="userSpaceOnUse" width="100" height="100">
-                <image xlink:href="img\monitor.png" x="-25" width="150" height="100" />
-              </pattern>
-            </defs>
-            <polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#imgResponsive)"/>
-          </svg>
+          <img src="img/skill1.png" width="150" class="mb-4">
+          <!--<svg class="myShadow mb-3" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 200px;">-->
+            <!--<defs>-->
+              <!--<pattern id="imgResponsive" patternUnits="userSpaceOnUse" width="100" height="100">-->
+                <!--<image xlink:href="img\monitor.png" x="-25" width="150" height="100" />-->
+              <!--</pattern>-->
+            <!--</defs>-->
+            <!--<polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#imgResponsive)"/>-->
+          <!--</svg>-->
           <h4>
             <strong>Responsive Webdesign</strong>
           </h4>
@@ -266,33 +361,35 @@
 
 
         <div class="col-lg-4 col-md-6 mb-5 mb-md-0">
-          <svg class="myShadow mb-3" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 200px;">
-            <defs>
-              <pattern id="imgFavorite" patternUnits="userSpaceOnUse" width="100" height="100">
-                <image xlink:href="img\like.png" x="-25" width="150" height="100" />
-              </pattern>
-            </defs>
-            <polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#imgFavorite)"/>
-          </svg>
+          <img src="img/skill2.png" width="150" class="mb-4">
+          <!--<svg class="myShadow mb-3" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 200px;">-->
+            <!--<defs>-->
+              <!--<pattern id="imgFavorite" patternUnits="userSpaceOnUse" width="100" height="100">-->
+                <!--<image xlink:href="img\like.png" x="-25" width="150" height="100" />-->
+              <!--</pattern>-->
+            <!--</defs>-->
+            <!--<polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#imgFavorite)"/>-->
+          <!--</svg>-->
           <h4>
-            <strong>Favorited</strong>
+            <strong>Soft Skills</strong>
           </h4>
-          <p class="text-faded mb-0">Currently really enjoying full-stack development with Angular as the front-end framework styled by Bootstrap and a .NET Core Web API.</p>
+          <p class="text-faded mb-0">I am a teamplayer who likes to realise projects in teams, nevertheless I will also do perfectly fine on my own. I always try to focus on good communication and open-mindedness.</p>
         </div>
 
         <div class="col-lg-4 col-md-12">
-         <svg class="myShadow mb-3" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 200px;">
-            <defs>
-              <pattern id="imgSkills" patternUnits="userSpaceOnUse" width="100" height="100">
-                <image xlink:href="img\education.png" x="-25" width="150" height="100" />
-              </pattern>
-            </defs>
-            <polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#imgSkills)"/>
-          </svg>
+          <img src="img/skill3.png" width="150" class="mb-4">
+         <!--<svg class="myShadow mb-3" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 200px;">-->
+            <!--<defs>-->
+              <!--<pattern id="imgSkills" patternUnits="userSpaceOnUse" width="100" height="100">-->
+                <!--<image xlink:href="img\education.png" x="-25" width="150" height="100" />-->
+              <!--</pattern>-->
+            <!--</defs>-->
+            <!--<polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#imgSkills)"/>-->
+          <!--</svg>-->
           <h4>
             <strong>Experience</strong>
           </h4>
-          <div style="width: 80%;" class="mx-auto skillTable">
+          <div style="width: 80%;" class="mx-auto skillTable mt-0">
             <table class="table table-sm table-borderless text-white text-center" >
               <tbody>
                 <tr class="p-0">      
@@ -338,59 +435,119 @@
         <div style="height: 6px; border-radius: 30px; width: 200px;" class="bg-dark mx-auto mb-5"></div>
       </div>
       <div class="row no-gutters">
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-md-6">
           <a class="portfolio-item" href="#">
             <span class="caption">
               <span class="caption-content">
                 <h2>Psychonaut</h2>
+                <h3 style="font-size: 14px;">Role: Developper</h3>
                 <p class="mb-0">Psychonaut is a small project I created when I was following a Unity3D game development course.</p>
               </span>
             </span>
-            <img class="img-fluid" src="img/portfolio-1.jpg" alt="">
+            <img class="img-fluid" src="img/Psychonaut.png" alt="">
           </a>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-md-6">
           <a class="portfolio-item" href="#">
             <span class="caption">
               <span class="caption-content">
                 <h2>Project 4.0</h2>
+                <h3 style="font-size: 14px;">Role: Full stack, mostly front-end</h3>
                 <p class="mb-0">Project 4.0 is a schoolproject which I worked on with a team. Our client was PCFruit, a research center that researches fruits.</p>
               </span>
             </span>
-            <img class="img-fluid" src="img/portfolio-2.jpg" alt="">
+            <img class="img-fluid" src="img/2BFruity.PNG" alt="">
           </a>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-md-6">
           <a class="portfolio-item" href="#">
             <span class="caption">
               <span class="caption-content">
                 <h2>Application Challenge</h2>
+                <h3 style="font-size: 14px;">Role: Full stack</h3>
                 <p class="mb-0">The application challenge was a challenge organised by Grasshoppers Academy where my team and I had a week to develop a webapplication with Angular and .NET Core.</p>
               </span>
             </span>
-            <img class="img-fluid" src="img/portfolio-3.jpg" alt="">
+            <img class="img-fluid" src="img/MatchAMaker.png" alt="">
           </a>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-md-6">
           <a class="portfolio-item" href="#">
             <span class="caption">
               <span class="caption-content">
                 <h2>Project APP-BIT</h2>
+                <h3 style="font-size: 14px;">Role: Full stack</h3>
                 <p class="mb-0">Project APP-BIT was a project I realised in a team the second year of my studies. It was made in PHP with the CodeIgniter framework.</p>
               </span>
             </span>
-            <img class="img-fluid" src="img/portfolio-4.jpg" alt="">
+            <img class="img-fluid" src="img/AppBi.png" alt="">
           </a>
         </div>
       </div>
     </div>
   </section>
 
+  <style>
+    .buttonImage {
+      background: white;
+      border-radius: 20px;
+      font-size: 100px;
+      text-align: center;
+      margin-right: 10px;
+      border-radius:50%;
+      display:inline-block;
+      padding:20px;
+      box-shadow: 0.1em 0.1em 0 0 rgba(15, 28, 63, 0.125);
+    }
 
+    @media only screen and (max-width: 480px) {
+      #internship{
+        height:1500px!important;
+      }
+    }
+
+    @media only screen and (max-width: 460px) {
+      #internship{
+        height:1800px!important;
+      }
+    }
+    @media only screen and (max-width: 375px) {
+      /*#internship{*/
+        /*height:2000px!important;*/
+      /*}*/
+      .ecareLogo{
+        width: 250px;
+        height: 70px;
+      }
+      .buttonImage {
+        background: white;
+        border-radius: 20px;
+        font-size: 100px;
+        text-align: center;
+        margin-right: 10px;
+        border-radius:50%;
+        display:inline-block;
+        padding:15px;
+        box-shadow: 0.1em 0.1em 0 0 rgba(15, 28, 63, 0.125);
+      }
+      .myDownloadButton{
+        width: 45px;
+      }
+    }
+    @media only screen and (max-width: 335px) {
+      #internship{
+      height:1900px!important;
+      }
+
+    }
+    .myDownloadButton:hover{
+      cursor: pointer;
+    }
+  </style>
   <!--internship-->
-  <section class="content-section bg-primary text-white text-center" id="internship" style="transform: skewY(3deg); background-color: #FF4F5A!important; height:900px">
+  <section class="content-section bg-primary text-white text-center" id="internship" style=" background-color: #FF4F5A!important; height:900px">
     
-    <div class="container" style="transform: skewY(-3deg);">
+    <div class="container">
       <div class="content-section-heading" >
         <h2 class="mb-1">Internship</h2>
         <div style="height: 6px; border-radius: 30px; width: 220px;" class="mx-auto mb-5 bg-dark" ></div>
@@ -398,7 +555,7 @@
       <div class="row">
         <div class="col-lg-6 col-md-12">
           <p class="lead">
-            During the last year of my studies at Thomas More I worked as an intern at E.Care for a per a period of 3 months (March - May 2020). 
+            During the last year of my studies at Thomas More I worked as an intern at E.Care for 3 months (March - May 2020).
             When I was looking for businesses to do my internship I stumbled upon E.Care, a Software Development business that creates, sells and implements software that supports the medical care process in hospitals.
             E.Care has a great working software with many satisfied customers, but the UI and UX of the application is getting a bit outdated, it's currently completely made in Windows Forms and it is not mobile friendly.
             To change that, they wanted to make a switch to a mobile friendly web-based variant of the software made with the Angular framework. 
@@ -407,43 +564,47 @@
             Since E.care has many modules we weren't able to rework them all, but we did finish as much as we could do in 3 months. These modules and components are now ready to be looked at by someone who will style the new software in a unique way.
           </p>
         </div>
+
+
         <div class="col-lg-6 col-md-12">
           <img src="img/logo-white-red.png" class="ecareLogo" height="100px" width="300px" alt="">
           <div class="row mt-5 mr-5 ml-5">
             <div class="col">
-              
-                <svg class="myShadow mb-3" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 60%;">
-                  <defs>
-                    <pattern id="imgDownload" patternUnits="userSpaceOnUse" width="100" height="100">
-                      <image xlink:href="img\interface.png" x="-25" width="150" height="100" />
-                    </pattern>
-                  </defs>
-                  <polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#imgDownload)"/>
-                </svg>
+              <i class="buttonImage"><img class="myImg myDownloadButton" src="img/interface.png" width="65" style="max-width: 65px"></i>
+                <!--<svg class="myShadow mb-3" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 60%;">-->
+                  <!--<defs>-->
+                    <!--<pattern id="imgDownload" patternUnits="userSpaceOnUse" width="100" height="100">-->
+                      <!--<image xlink:href="img\interface.png" x="-25" width="150" height="100" />-->
+                    <!--</pattern>-->
+                  <!--</defs>-->
+                  <!--<polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#imgDownload)"/>-->
+                <!--</svg>-->
                 <h3><span class="myLink">PVA</span></h3> 
           </div>
             <div class="col">
-              <svg class="myShadow mb-3" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 60%;">
-                <defs>
-                  <pattern id="imgDownload" patternUnits="userSpaceOnUse" width="100" height="100">
-                    <image xlink:href="img\interface.png" x="-25" width="150" height="100" />
-                  </pattern>
-                </defs>
-                <polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#imgDownload)"/>
-              </svg>
+              <i class="buttonImage"><img class="myImg myDownloadButton" src="img/interface.png" width="65" style="max-width: 65px"></i>
+              <!--<svg class="myShadow mb-3" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 60%;">-->
+                <!--<defs>-->
+                  <!--<pattern id="imgDownload" patternUnits="userSpaceOnUse" width="100" height="100">-->
+                    <!--<image xlink:href="img\interface.png" x="-25" width="150" height="100" />-->
+                  <!--</pattern>-->
+                <!--</defs>-->
+                <!--<polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#imgDownload)"/>-->
+              <!--</svg>-->
               <h3><span class="myLink">Realisatie</span></h3> 
             </div>
           </div>
           <div class="row mr-5 ml-5">
             <div class="col mt-2">
-              <svg class="myShadow mb-3" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 30%;">
-                <defs>
-                  <pattern id="imgDownload" patternUnits="userSpaceOnUse" width="100" height="100">
-                    <image xlink:href="img\interface.png" x="-25" width="150" height="100" />
-                  </pattern>
-                </defs>
-                <polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#imgDownload)"/>
-              </svg>
+              <i class="buttonImage"><img class="myImg myDownloadButton" src="img/interface.png" width="65" style="max-width: 65px"></i>
+              <!--<svg class="myShadow mb-3" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" style="width: 30%;">-->
+                <!--<defs>-->
+                  <!--<pattern id="imgDownload" patternUnits="userSpaceOnUse" width="100" height="100">-->
+                    <!--<image xlink:href="img\interface.png" x="-25" width="150" height="100" />-->
+                  <!--</pattern>-->
+                <!--</defs>-->
+                <!--<polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#imgDownload)"/>-->
+              <!--</svg>-->
               <h3><span class="myLink">Reflectie</span></h3> 
             </div>
             
