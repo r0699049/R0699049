@@ -20,6 +20,7 @@
 
   <!-- Custom CSS -->
   <link href="css/stylish-portfolio.min.css" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.ico">
 
 </head>
 <style>
@@ -51,7 +52,7 @@
 .skillsButton:hover{
     background-color: #397CBF!important;
     transition: ease 0.3s;
-  border-color: #397CBF;
+    border-color: #397CBF;
   }
 #aboutButton:hover{
   background-color: #397CBF!important;
@@ -359,7 +360,7 @@
               <p class="lead" style="font-size: 20px;">My name is Dries Luyten, I am a motivated Application Development student at Thomas More Geel.</p>
               <p class="lead" style="font-size: 20px;">This year (June 2020) I will finish my studies and I am excited to finally practice my interests in the business world. Besides IT I have a passion for dogs, sports, music and videogames.</p>
               <p class="lead" style="font-size: 20px;">You can download my CV or read more about my skills and projects below. </p>
-              <a class="btn btn-dark btn-xl js-scroll-trigger mt-5 mr-3 skillsButton" href="#skills">Skills</a><a class="btn btn-xl btn-secondary js-scroll-trigger mt-5 mt-md-5 mt-sm-5 downloadButton" style="background-color: #4DA6FF;" href="#services">Download my CV</a>
+              <a class="btn btn-dark btn-xl js-scroll-trigger mt-5 mr-3 skillsButton" href="#skills">Skills</a><a class="btn btn-xl btn-secondary js-scroll-trigger mt-5 mt-md-5 mt-sm-5 downloadButton" style="background-color: #4DA6FF;" href="docs/CV_Luyten_Dries.pdf" target="_blank">Download my CV</a>
             </div>
           </div>
          
@@ -477,7 +478,7 @@
       </div>
       <div class="row">
         <div class="col-lg-6 col-md-6">
-          <a class="portfolio-item" href="#">
+          <a class="portfolio-item" href="docs/Project4.0.pdf" target="_blank">
             <span class="caption">
               <span class="caption-content">
                 <h2>Psychonaut</h2>
@@ -489,7 +490,7 @@
           </a>
         </div>
         <div class="col-lg-6 col-md-6">
-          <a class="portfolio-item" href="#">
+          <a class="portfolio-item" href="docs/Project4.0.pdf" target="_blank">
             <span class="caption">
               <span class="caption-content">
                 <h2>Project 4.0</h2>
@@ -501,7 +502,7 @@
           </a>
         </div>
         <div class="col-lg-6 col-md-6 mt-4">
-          <a class="portfolio-item" href="#">
+          <a class="portfolio-item" href="docs/AppChallenge.pdf" target="_blank">
             <span class="caption">
               <span class="caption-content">
                 <h2>Application Challenge</h2>
@@ -513,7 +514,7 @@
           </a>
         </div>
         <div class="col-lg-6 col-md-6 mt-4">
-          <a class="portfolio-item" href="#">
+          <a class="portfolio-item" data-toggle="modal" data-target="#AppBiModal">
             <span class="caption">
               <span class="caption-content">
                 <h2>Project APP-BIT</h2>
@@ -527,6 +528,51 @@
       </div>
     </div>
   </section>
+
+  <!-- APP-BI Modal -->
+  <div class="modal fade" id="AppBiModal" tabindex="-1" role="dialog" aria-labelledby="AppBiModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="AppBiModalLabel">Project APP-BIT</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col">
+              <span style="font-style: italic;font-weight:bold;font-size: 18px;">If the application is still hosted you can check it out here:</span> <br/><a href="https://woutmergaerts.com/team17" target="_blank">https://woutmergaerts.com/team17</a>
+              <div class="col mt-2">
+                You can log in with following credentials:
+                <ul>
+                  <li>
+                    <span style="font-weight: bold">Username:</span> natalie.smets@telenet.be
+                  </li>
+                  <li>
+                    <span style="font-weight: bold">Password:</span> paswoord
+                  </li>
+                </ul>
+                <span style="font-size: 14px; margin-top: 0px;"><span style="font-weight: bold">NOTE: </span>Since there was some trouble reviving this application after it was taken down, some functionalities might not completely work anymore.</span>
+
+              </div>
+
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col">
+              <span style="font-style: italic;font-weight:bold;font-size: 18px;">If the link above doesn't work anymore I can show you some screenshots of the application here:</span> <br/><a href="docs/ProjectAppBit.pdf" target="_blank">Project APP-BIT, Team Feel Good Inc.</a><br/><br/>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer border-0">
+
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <style>
     .buttonImage {
@@ -620,7 +666,7 @@
                   <!--</defs>-->
                   <!--<polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#imgDownload)"/>-->
                 <!--</svg>-->
-                <h3><span class="myLink">PVA</span></h3> 
+                <h3><a style="text-decoration: none!important;color: #ffff;" class="myLink" href="docs/PVA_Stage_Dries_Luyten.pdf" target="_blank">PVA</a></h3>
           </div>
             <div class="col">
               <i class="buttonImage"><img class="myImg myDownloadButton" src="img/interface.png" width="65" style="max-width: 65px"></i>
@@ -632,7 +678,7 @@
                 <!--</defs>-->
                 <!--<polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#imgDownload)"/>-->
               <!--</svg>-->
-              <h3><span class="myLink">Realisatie</span></h3> 
+              <h3><a style="text-decoration: none!important; color: #ffff;" class="myLink" href="docs/Realisatie_Dries_Luyten.pdf" target="_blank">Realisatie</a></h3>
             </div>
           </div>
           <div class="row mr-5 ml-5">
@@ -646,7 +692,7 @@
                 <!--</defs>-->
                 <!--<polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#imgDownload)"/>-->
               <!--</svg>-->
-              <h3><span class="myLink">Reflectie</span></h3> 
+              <h3><a style="text-decoration: none!important;color: #ffff;" class="myLink" href="docs/Stagereflectie_Dries_Luyten.pdf" target="_blank">Reflectie</a></h3>
             </div>
             
           </div>
@@ -698,17 +744,6 @@
   
 
   <script>
-      var docWidth = document.documentElement.offsetWidth;
-
-      [].forEach.call(
-          document.querySelectorAll('*'),
-          function(el) {
-              if (el.offsetWidth > docWidth) {
-                  console.log(el);
-              }
-          }
-      );
-
     (function($) {
     "use strict"; // Start of use strict
   
