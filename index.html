@@ -263,6 +263,16 @@
       .myName, .myHeaderText{
         margin:auto!important;
       }
+      .headerButtons{
+        visibility:hidden!important;
+      }
+
+    }
+    @media only screen and (min-width: 1041px) {
+
+      #mobileAboutButton{
+        visibility:hidden!important;
+      }
     }
 
   </style>
@@ -280,7 +290,7 @@
                 <em class="ml-0 pl-0 ">I'm a <span style="color: #385A64;" id="headerText">student App Dev @ Thomas More</span></em>
               </h3>
             </div>
-            <div class="row">
+            <div class="row headerButtons">
               <button type="button" class="btn btn-dark mr-3" id="aboutButton" data-toggle="modal" data-target="#exampleModal">About</button>
               <a class="btn btn-secondary js-scroll-trigger" href="#about">Read more</a>
             </div>
@@ -301,7 +311,13 @@
                 <!--<polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#img)"/>-->
               <!--</svg>-->
           </div>
+          <div class="col-sm-12" style="margin-top:50px; " id="mobileAboutButton">
+            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">About</button>
+          </div>
+
         </div>
+
+
       </div>
       <div class="overlay"></div>
     </header>
@@ -763,7 +779,7 @@
         <div class="col-lg-6 col-md-12">
           <p class="lead">
             During the last year of my studies at Thomas More I worked as an intern at E.Care for 3 months (March - May 2020).
-            When I was looking for businesses to do my internship I stumbled upon E.Care, a Software Development business that creates, sells and implements software that supports the medical care process in hospitals.
+            When I was looking for a company to do my internship I stumbled upon E.Care, a Software Development business that creates, sells and implements software that supports the medical care process in hospitals.
             E.Care has a great working software with many satisfied customers, but the UI and UX of the application is getting a bit outdated, it's currently completely made in Windows Forms and it is not mobile friendly.
             To change that, they wanted to make a switch to a mobile friendly web-based variant of the software made with the Angular framework.
             That's where I come in, my job was to analyse various modules of the existing software, prototype and finally develop them in an Agile way.
@@ -798,7 +814,7 @@
                 <!--</defs>-->
                 <!--<polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#imgDownload)"/>-->
               <!--</svg>-->
-              <h3><a style="text-decoration: none!important; color: #ffff;" class="myLink" href="docs/Realisatie_Dries_Luyten.pdf" target="_blank">Realisatie</a></h3>
+              <h3><a style="text-decoration: none!important; color: #ffff;" class="myLink" href="docs/Realisatie_Dries_Luyten.pdf" target="_blank">Realisations</a></h3>
             </div>
           </div>
           <div class="row mr-5 ml-5">
@@ -812,7 +828,7 @@
                 <!--</defs>-->
                 <!--<polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#imgDownload)"/>-->
               <!--</svg>-->
-              <h3><a style="text-decoration: none!important;color: #ffff;" class="myLink" href="docs/Stagereflectie_Dries_Luyten.pdf" target="_blank">Reflectie</a></h3>
+              <h3><a style="text-decoration: none!important;color: #ffff;"  href="docs/Stagereflectie_Dries_Luyten.pdf" target="_blank"><span class="myLink" style="width: 50px!important;">Reflection</span></a></h3>
             </div>
 
           </div>
@@ -842,6 +858,8 @@
         </li>
       </ul>
       <p class="text-muted small mb-0">Copyright &copy; Dries Luyten 2020</p>
+      <p class="text-muted small mb-0">Image Source https://www.freepik.com/</p>
+
     </div>
   </footer>
 
