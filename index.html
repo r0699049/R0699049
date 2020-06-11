@@ -24,6 +24,11 @@
 
 </head>
 <style>
+  section{
+    max-width: 100%!important;
+    overflow:hidden!important;
+  }
+
 .myLink {
   line-height: initial;  /* added */
 }
@@ -180,7 +185,12 @@
   @media only screen and (max-width: 768px) {
 
     .myHeaderText{
+      /*position: absolute!important;*/
       left: 15%!important;
+    }
+
+    #myFaceImageContainer{
+      text-align: center!important;
     }
 
     #skills{
@@ -197,6 +207,16 @@
         padding:45px;
 
     }
+    .masthead{
+      padding-top: 50px;
+    }
+    .headerContainer{
+      padding-bottom: 0px!important;
+    }
+    .myHeaderText{
+      display: none;
+    }
+
 }
 @media only screen and (max-width: 400px) {
 
@@ -205,9 +225,18 @@
         padding: 10px!important;
     }
 
+    .headerRow{
+      top: 50px!important;
+    }
+
     .skillsButton{
         padding: 10px!important;
     }
+
+    #myHeader{
+      height: 700px!important;
+    }
+
 }
 @media only screen and (max-width: 330px) {
 
@@ -277,17 +306,17 @@
 
   </style>
   <!-- Header -->
-  <section >
+  <section style="width: 100vw;">
     <header class="masthead d-flex mt-0" id="myHeader" style="height: 100vh!important; background-color: #FF4F5A!important; background: none; margin-top: 20px!important; ">
-      <div class="container text-center my-auto" >
-        <div class="row">
-          <div class="col-lg-7 pr-5 col-md-12 col-sm-12" >
+      <div class="container text-center my-auto headerContainer" >
+        <div class="row ">
+          <div class="col-lg-7 pr-5 col-md-12 col-sm-12 col-12" >
             <div class="row">
               <h1 class="mb-1 text-white myName">Luyten Dries</h1>
             </div>
             <div class="row">
               <h3 class="mb-5 text-white myHeaderText">
-                <em class="ml-0 pl-0 ">I'm a <span style="color: #385A64;" id="headerText">student App Dev @ Thomas More</span></em>
+                <em class="ml-0 pl-0 "><span class="headerTextPreFix">I'm a </span><span style="color: #385A64;" id="headerText">student App Dev @ Thomas More</span></em>
               </h3>
             </div>
             <div class="row headerButtons">
@@ -335,10 +364,10 @@
         </div>
         <div class="modal-body">
           <div class="row">
-            <div class="col-4">
+            <div class="col-md-4 col-sm-12" id="myFaceImageContainer">
               <img style="border-radius: 100px;" src="img/myFace.jpg" width="150" class="mb-4">
             </div>
-            <div class="col-8">
+            <div class="col-md-8 col-sm-12">
               My name is Dries Luyten and this is my portfolio. In this portfolio I will tell you a little something about myself, the skills I've gained throughout my 3 years of college, some projects I've realised with this knowledge and finally a little summary of my internship at E.Care.
             </div>
           </div>
@@ -375,7 +404,7 @@
             <div class="col-lg-4 pl-0 ml-5 mr-5 col-md-11 description" >
               <p class="lead" style="font-size: 20px;">My name is Dries Luyten, I am a motivated Application Development student at Thomas More Geel.</p>
               <p class="lead" style="font-size: 20px;">This year (June 2020) I will finish my studies and I am excited to finally practice my interests in the business world. Besides IT I have a passion for dogs, sports, music and videogames.</p>
-              <p class="lead" style="font-size: 20px;">You can download my CV or read more about my skills and projects below. </p>
+              <p class="lead" style="font-size: 20px;">You can check out & download my CV for more information or read more about my skills and projects below. </p>
               <a class="btn btn-dark btn-xl js-scroll-trigger mt-5 mr-3 skillsButton" href="#skills">Skills</a><a class="btn btn-xl btn-secondary js-scroll-trigger mt-5 mt-md-5 mt-sm-5 downloadButton" style="background-color: #4DA6FF;" href="docs/CV_Luyten_Dries.pdf" target="_blank">Download my CV</a>
             </div>
           </div>
